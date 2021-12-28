@@ -1,0 +1,16 @@
+@import "../../asset/scss/mixin";
+
+.result {
+    margin-top: calc(var(--sizeHeader) * -0.2);
+
+    .hold {
+        padding: 0 0 var(--gap4);
+        @include flex($fd: column, $gap: var(--gap2));
+    }
+
+    @include medium() {
+        .hold {
+            gap: var(--gap4);
+        }
+    }
+}

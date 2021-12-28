@@ -1,0 +1,139 @@
+@import "../../asset/scss/mixin";
+
+.result {
+    &Item {
+        padding: var(--gap1-5) var(--gap2);
+        position: relative;
+        @include flex($ai: center, $jc: space-between, $gap: var(--gap2));
+        border-radius: var(--gap0-25);
+        border: 3px solid transparent;
+        box-shadow: 0px 5px 20px hsla(180, 29%, 50%, 0.4);
+        transition: border-left-color 0.2s ease;
+
+        &:hover {
+            border-left-color: var(--desaturatedDarkCyan);
+        }
+    }
+    &Left {
+        @include flex($ai: center, $gap: var(--gap1-5));
+    }
+    &Avater {
+        width: var(--sizeAvater);
+        height: var(--sizeAvater);
+        border-radius: 50%;
+    }
+
+    &Info {
+        @include flex($fd: column, $gap: var(--gap0-25));
+    }
+
+    &Short {
+        @include flex($ai: center, $gap: var(--gap0-5));
+    }
+    &New,
+    &Featured {
+        padding: var(--gap0-25) var(--gap0-75);
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: var(--lightGrayishCyan);
+        border-radius: var(--gap2);
+        user-select: none;
+    }
+    &New {
+        background-color: var(--desaturatedDarkCyan);
+    }
+    &Featured {
+        background-color: var(--veryDarkGrayishCyan);
+    }
+    &Company {
+        font-weight: 600;
+        color: var(--desaturatedDarkCyan);
+        user-select: none;
+    }
+    &Position {
+        font-weight: 600;
+        color: var(--desaturatedDarkCyan);
+        cursor: pointer;
+    }
+
+    &Detail {
+        &Hold {
+            @include flex($ai: center, $gap: var(--gap0-5));
+            color: #979797;
+            user-select: none;
+        }
+    }
+    &Sep {
+        display: block;
+        width: var(--sizeSep);
+        height: var(--sizeSep);
+        background-color: #979797;
+        border-radius: 50%;
+    }
+
+    &Keyword {
+        &Hold {
+            @include flex($ai: center, $gap: var(--gap0-5));
+            flex-wrap: wrap;
+        }
+
+        padding: var(--gap0-25) var(--gap0-5);
+        font-size: small;
+        font-weight: 600;
+        background-color: var(--lightGrayishCyan);
+        color: var(--desaturatedDarkCyan);
+        border-radius: var(--gap0-25);
+        transition: background-color 0.2s ease, color 0.2s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--desaturatedDarkCyan);
+            color: var(--lightGrayishCyan);
+        }
+    }
+
+    //
+    //
+    //
+    @include medium() {
+        &Item {
+            padding-top: var(--gap2-5);
+            flex-direction: column;
+            gap: var(--gap1);
+        }
+        &Left {
+            width: 100%;
+        }
+        &Avater {
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+        }
+
+        &Keyword {
+            &Hold {
+                width: 100%;
+                padding-top: var(--gap1);
+                border-top: 1px solid var(--darkGrayishCyan);
+            }
+        }
+    }
+
+    @include mobile() {
+        &New,
+        &Featured {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.7rem;
+        }
+        &Company {
+            font-size: 0.9rem;
+        }
+        &Position {
+            font-size: 1.25rem;
+            color: var(--veryDarkGrayishCyan);
+        }
+        &Detail {
+            font-size: 0.9rem;
+        }
+    }
+}

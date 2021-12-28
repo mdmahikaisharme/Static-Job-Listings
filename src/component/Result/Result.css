@@ -1,0 +1,21 @@
+.result {
+  margin-top: calc(var(--sizeHeader) * -0.2);
+}
+
+.result .hold {
+  padding: 0 0 var(--gap4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: var(--gap2);
+}
+
+@media (max-width: 900px) {
+  .result .hold {
+    gap: var(--gap4);
+  }
+}

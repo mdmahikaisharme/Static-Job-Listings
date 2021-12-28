@@ -1,0 +1,17 @@
+@import "./variable";
+@import "./reset";
+@import "./mixin";
+
+.hold {
+    width: 80%;
+    margin: 0 auto;
+
+    @include medium() {
+    width: 70%;
+        
+    }
+
+    @include mobile() {
+        width: 90%;
+    }
+}

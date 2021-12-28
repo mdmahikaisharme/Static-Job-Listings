@@ -1,0 +1,67 @@
+:root {
+  --desaturatedDarkCyan: hsl(180, 29%, 50%);
+  --lightGrayishCyan: hsl(180, 52%, 96%);
+  --lightGrayishCyan: hsl(180, 31%, 95%);
+  --darkGrayishCyan: hsl(180, 8%, 52%);
+  --veryDarkGrayishCyan: hsl(180, 14%, 20%);
+  --gap0-25: 0.25rem;
+  --gap0-5: 0.5rem;
+  --gap0-75: 0.75rem;
+  --gap1: 1rem;
+  --gap1-5: 1.5rem;
+  --gap2: 2rem;
+  --gap2-5: 2.5rem;
+  --gap3: 3rem;
+  --gap4: 4rem;
+  --gap5: 5rem;
+  --gap6: 6rem;
+  --sizeHeader: 10rem;
+  --sizeIcon: 0.75rem;
+  --sizeAvater: 5rem;
+  --sizeSep: 0.25rem;
+  --zIndex: 1;
+}
+
+@media (max-width: 900px) {
+  :root {
+    --sizeAvater: 3.5rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.hold {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .hold {
+    width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .hold {
+    width: 90%;
+  }
+}

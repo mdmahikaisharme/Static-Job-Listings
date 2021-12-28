@@ -1,0 +1,99 @@
+@import "../../asset/scss/mixin";
+
+.search {
+    width: 100%;
+    padding: var(--gap1) var(--gap2);
+    @include flex($ai: center, $gap: var(--gap1));
+    background-color: #fff;
+    border-radius: var(--gap0-25);
+    box-shadow: 0px 5px 20px hsla(180, 29%, 50%, 0.4);
+
+    &Keyword {
+        &Hold {
+            max-width: 50%;
+            flex: none;
+            @include flex($ai: center, $gap: var(--gap0-75));
+            flex-wrap: wrap;
+
+            &:empty {
+                display: none;
+            }
+        }
+
+        @include flex($ai: center);
+        background-color: var(--lightGrayishCyan);
+        border-radius: var(--gap0-25);
+        overflow: hidden;
+
+        &Name {
+            padding: var(--gap0-25) var(--gap0-5);
+            font-size: small;
+            font-weight: 600;
+            color: var(--desaturatedDarkCyan);
+            overflow: hidden;
+        }
+
+        &Remove {
+            flex: none;
+            width: calc(var(--sizeIcon) + var(--gap1));
+            height: calc(var(--sizeIcon) + var(--gap1));
+            @include flex($ai: center, $jc: center);
+            background-color: var(--desaturatedDarkCyan);
+            border: none;
+            outline: none;
+
+            img {
+                width: var(--sizeIcon);
+                height: var(--sizeIcon);
+            }
+
+            &:hover {
+                background-color: var(--veryDarkGrayishCyan);
+            }
+        }
+    }
+
+    &Form {
+        flex-grow: 1;
+    }
+
+    &Input,
+    &Clear {
+        background: none;
+        border: none;
+        outline: none;
+    }
+
+    &Input {
+        width: 100%;
+        padding: var(--gap0-5);
+        font-weight: 600;
+        border-bottom: 2px solid var(--desaturatedDarkCyan);
+    }
+
+    &Clear {
+        flex: none;
+        text-decoration: underline;
+        font-weight: 600;
+        color: var(--desaturatedDarkCyan);
+    }
+
+    //
+    //
+    //
+    @include medium() {
+        flex-direction: column;
+
+        &Keyword {
+            &Hold {
+                max-width: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        &Form {
+            width: 100%;
+        }
+    }
+}
